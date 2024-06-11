@@ -1,0 +1,23 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block title %} Home {% endblock %}
+{% block head %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  <script src="https://kit.fontawesome.com/f8ec9ad059.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="{% static 'js/contact_us.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+  <div class="index-content">
+    <div class="best-deals">
+      Best Deals Sliding
+    </div>
+  
+    <div class="products-showcase">
+      Products showcase
+    </div>
+    <p>This is Home Page or Index Page </p>
+  </div>
+{% endblock %}

@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initual-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/master.css' %}">
+    <script src="{% static 'js/master.js' %}" charset="utf-8"></script>
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    <header class="h-container h-container-sm h-container-ms h-container-ls">
+      <div class="left-section left-setion-sm left-setion-ms left-setion-ls">
+        <div class="icon-container show-menu">
+          <a class="hamburger-icon" href="#" onclick="toggleMenu()">&#9776;</a>
+          <a class="close-icon" href="#" onclick="toggleMenu()">&#10005;</a>
+        </div>
+        <a href="#"><img class="company-logo" src="../static/logos/apv-logo.jpg" alt="Company Logo"></a>
+      </div>
+      <div class="middle-section middle-section-sm middle-section-ms middle-section-ls">
+        <input class="search-bar" type="text" placeholder="Search products, brands and categories" img class="search-icon" src="../static/icons/search.svg" alt="">
+        <button class="search-button"><img class="search-icon" src="../static/icons/search.svg" alt=""></button>
+      </div>
+      <div class="right-section right-section-sm right-section-ms right-section-ls">
+        <a href="#"><i class="fa fa-phone fa-shake icon phone-icon" style="background-color: lightgreen; color: white;"></i></a>
+        <a href="#"><i class="fa fa-whatsapp icon whatsapp-icon" style="background-color:#25d366; color: white;"></i></a>
+        <a href="#"><i class="fa fa-facebook icon facebook=icon" style="background-color:blue; color: white;"></i></a>
+        <a href="#"><i class="fa fa-linkedin icon linkedin-icon"  style="border: 0.5px solid grey;"></i></a>
+        <a href="#"><i class="fa fa-instagram icon instagram-icon" style="background-color:purple; color: white;"></i></a>
+      </div>
+      <nav class="menu menu-sm menu-ms menu-ls">
+        <ul class="menu-content menu-content-sm menu-content-ms menu-content-ls">
+          <li><a href="Home">Home</a></li>
+          <li><a href="About Us">About Us</a></li>
+          <li class="services-container services-container-sm services-container-ms services-container-ls" onclick="toggleAccordion(this)">
+            Services <span class="arrow">&#9660;</span>
+            <ul class="services service-sm services-ms service-ls">
+              <li><a href="#">Service 1</a></li>
+              <li><a href="#">Service 2</a></li>
+              <li><a href="#">Service 3</a></li>
+              <li><a href="#">Service 4</a></li>
+              <li><a href="#">Service 5</a></li>
+            </ul>
+          </li>
+          <li class="products-container products-container-sm products-container-ms products-container-ls" onclick="toggleAccordion(this)">
+            Products & Brands <span class="arrow">&#9660;</span>
+            <ul class="categories categories-sm categories-ms categories-ls">
+              <li><a href="#">Category 1</a></li>
+              <li><a href="#">Category 1</a></li>
+              <li><a href="#">Category 1</a></li>
+              <li><a href="#">Category 1</a></li>
+              <li><a href="#">Category 1</a></li>
+              <li><a href="#">Brands</a></li>
+            </ul>
+          </li>
+          <li><a href="Projects">Projects</a></li>
+          <li><a href="Contacts Us">Contacts</a></li>
+        </ul>
+      </nav>
+
+    </header>
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+    <footer class="hidden animated">
+      <div class="f-container f-container-sm f-container-ms f-container-ls">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>About Us</h3>
+            <p>Company information and mission statement.</p>
+            <p>Contact information: address, phone, email.</p>
+          </div>
+          <div class="vertical-line"></div>
+          <div class="col-md-4">
+            <h3>Product Categories</h3>
+            <ul>
+              <li><a href="#">Solar Panels</a></li>
+              <li><a href="#">Solar Panels</a></li>
+              <li><a href="#">Solar Panels</a></li>
+              <li><a href="#">Solar Panels</a></li>
+            </ul>
+          </div>
+          <div class="vertical-line"></div>
+          <div class="col-md-4">
+            <h3>Customer Support</h3>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Warrant Information</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <div class="row-2">
+          <div class="col-md-6">
+            <p class="copyright">&copy; 2023 AbirosPowerVentures. All rights reserved.</p>
+          </div>
+          <div class="col-md-6">
+            <ul class="social-media-icons">
+              <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

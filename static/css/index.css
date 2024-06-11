@@ -1,0 +1,11 @@
+.best-deals {
+    background-color: red;
+    height: 200px;
+    border: 1px solid black;
+}
+.index-content {
+    background-color: green;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}

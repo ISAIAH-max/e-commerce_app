@@ -1,0 +1,82 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block title %} Contact Us {% endblock %}
+{% block head %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'css/contact_us.css' %}">
+  <script src="https://kit.fontawesome.com/f8ec9ad059.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="{% static 'js/contact_us.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="contacts-container">
+  <div class="contact-background hidden animated" style="background-image: url('static/images/contacts_us.webp')">
+    <h3>Get in touch</h3>
+  </div>
+  <div class="contacts hidden animated">
+    <h3 class="hr-lines">Contacts Links</h3>
+    <div class="contact-us-pg-row-2">
+      <div class="address hidden animated">
+        <i class="fa-solid fa-location-crosshairs cpg-icon"></i>
+        <h3>Address</h3>
+        <p>Nairobi CBD</p>
+        <p>Gill House, 3rd Floor</p>
+        <p>Office No. 30</p>
+      </div>
+      <div class="email hidden animated">
+        <i class="fa-regular fa-envelope cpg-icon"></i>
+        <h3>Email</h3>
+        <p>hello@abirospowerventures.com</p>
+      </div>
+      <div class="phone hidden animated">
+        <i class="fa-solid fa-phone-flip cpg-icon"></i>
+        <h3>Phone</h3>
+        <p>Reach us via phone</p>
+        <p>Just a click</p>
+      </div>
+       <div class="whatsapp card hidden animated">
+        <i class="fa fa-whatsapp cpg-icon"></i>
+        <h3>Whatsapp</h3>
+        <p>Reach Us via Whatsapp</p>
+        <p>Just a click</p>
+      </div>
+      <div class="hours hidden animated">
+        <i class="fa-regular fa-clock cpg-icon"></i>
+        <h3>Office Hours</h3>
+        <p>Mon - Fri: 8am to 5pm EAT</p>
+        <p>Sat: 9am to 2pm</p>
+        <p>Sun: Closed</p>
+        <p>Holydays: Closed</p>
+      </div>
+    </div>
+  </div>
+  <div class="contact-map hidden animated">
+    <h3 class="hr-lines">Map</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3988.8113842139205!2d36.8244941!3d-1.2872745!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f112877fb3c03%3A0x3827cc3b0aae8282!2sGill%20House!5e0!3m2!1sen!2ske!4v1689166640754!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <div class="contact-form hidden animated">
+    <h3 class="hr-lines">Contacts Form</h3>
+    <form class="" action="index.html" method="post">
+      <h3>Leave your Message</h3>
+      <ul>
+        <li>
+          <label for="name" class="user-name-label">Fullname</label>
+          <input type="text" name="user-name" value="" placeholder="Fullname" onkeyup="showLabel('name')">
+        </li>
+        <li>
+          <label for="phone" class="user-phone-label">Phone</label>
+          <input type="text" name="user-phone" value="" placeholder="Phone/Whatsapp (Very important)">
+        </li>
+        <li>
+          <label for="message" class="user-message-label">Enter your message here; include product details such as size, material to receive an accurate quote</label>
+          <textarea name="user-message" rows="8" cols="80" placeholder="Enter your message here; include product details such as size, material to receive an accurate quote"></textarea>
+        </li>
+        <li>
+          <button type="submit" name="button" class="button">Send your message</button>
+        </li>
+      </ul>
+    </form>
+  </div>
+</div>
+{% endblock %}

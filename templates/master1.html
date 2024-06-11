@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/master1.css' %}">
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    <header>
+      <div class="top-section">
+        <div class="top-left-section">
+          <ul>
+            <li>Online Shop</li>
+            <li>Trade Shows</li>
+            <li>Other Services</li>
+          </ul>
+        </div>
+        <div class="top-right-section">
+          <ul>
+            <li>Message</li>
+            <span class="link-separator">|</span>
+            <li>Cart</li>
+          </ul>
+        </div>
+      </div>
+      <div class="below-section">
+        <div class="company-logo">
+          <img class="compa-logo" src="{% static 'logos/abiros2.png' %}" alt="Company Logo">
+        </div>
+        <div class="search-bar">
+          <input type="text" name="" placeholder="Search for products..." value="">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="quotation">
+          <button type="button" name="button">Get Quotations</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+
+    <footer class="footer-section">
+      <div class="footer-section1">
+        <div class="About-us">
+          <p>ABOUT US</p>
+          <ul>
+            <li>Who are we?</li>
+            <li>Why us</li>
+            <li>Our location</li>
+          </ul>
+        </div>
+        <div class="Important-links">
+          <p>IMPORTANT LINKS</p>
+          <ul>
+            <li>Products categories</li>
+            <li>Our services</li>
+            <li>Projects done</li>
+          </ul>
+        </div>
+        <div class="Customer-support">
+          <p>CUSTOMER SUPPORT</p>
+          <ul>
+            <li>Our contacts</li>
+            <li>Warrants</li>
+            <li>Frequent asked questions (FAQ)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-section2">
+        <p class="copyright">&copy; 2023 AbirosPowerVentures. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
